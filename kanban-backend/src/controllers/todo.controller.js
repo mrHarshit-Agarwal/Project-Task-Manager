@@ -77,7 +77,7 @@ export const getTodoTodos = asyncHandler(async (req, res) => {
       }).sort({ createdAt: 1 });
       break;
     default:
-      throw new CustomError("Invalid listDate parameter", 400);
+      throw new CustomError("Invalid list Date parameter", 400);
   }
 
   res.status(200).json({ status: true, todos });
@@ -125,7 +125,7 @@ export const getProgressTodos = asyncHandler(async (req, res) => {
       }).sort({ createdAt: 1 });
       break;
     default:
-      throw new CustomError("Invalid listDate parameter", 400);
+      throw new CustomError("Invalid list Date parameter", 400);
   }
 
   res.status(200).json({ status: true, todos });
@@ -173,7 +173,7 @@ export const getDoneTodos = asyncHandler(async (req, res) => {
       }).sort({ createdAt: 1 });
       break;
     default:
-      throw new CustomError("Invalid listDate parameter", 400);
+      throw new CustomError("Invalid list Date parameter", 400);
   }
 
   res.status(200).json({ status: true, todos });
@@ -222,7 +222,7 @@ export const getBacklogTodos = asyncHandler(async (req, res) => {
       }).sort({ createdAt: 1 });
       break;
     default:
-      throw new CustomError("Invalid listDate parameter", 400);
+      throw new CustomError("Invalid list Date parameter", 400);
   }
 
   res.status(200).json({ status: true, todos });

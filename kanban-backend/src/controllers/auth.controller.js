@@ -16,7 +16,7 @@ export const signUp = asyncHandler(async (req, res) => {
   if (!name || !email || !password) {
     return res
       .status(400)
-      .json({ sucess: false, message: "Please provide required fields " });
+      .json({ sucess: false, message: "Please provide required fields" });
   }
 
   const existingUser = await User.findOne({ email });
@@ -85,7 +85,7 @@ export const refresh = asyncHandler(async (req, res) => {
 
   const decoded = JWT.verify(refresh_token, config.REFRESH_TOKEN);
   if (!decoded) {
-    res.status(400).json({ success: false, message: "Couldn't refreshToken" });
+    res.status(400).json({ success: false, message: "Couldn't refresh Token" });
   }
   const id = decoded._id;
   const user = await User.findById(id);
@@ -99,7 +99,7 @@ export const refresh = asyncHandler(async (req, res) => {
 });
 
 export const logout = asyncHandler(async (req, res) => {
-  console.log("HELLO");
+  console.log("Hello");
   res.cookie("refresh_token", null, {
     expires: new Date(Date.now()),
     httpOnly: true,
