@@ -1,6 +1,6 @@
 # Project-Task-Manager
 
-# link :https://kanbanfrontend1.netlify.app/
+developed link :https://kanbanfrontend1.netlify.app/
 
 User can login and register to the application, only logged in users can create tasks
 
